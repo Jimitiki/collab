@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>Collab</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="/static/css/styles.css" />
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/static/js/index.js"></script>
+  </head>
+  <body ng-controller="myController">
+      <div class="top-nav">
+          <% if (signedIn) { %>
+            <a class="top-nav-link abel" href="/create">Create a Project</a>
+            <a class="top-nav-link abel" href="/logout">Logout</a>
+          <% } else { %>
+            <a class="top-nav-link abel" href="/signup">Sign Up</a>
+            <a class="top-nav-link abel" href="/login">Log in</a>
+          <% } %>
+      </div>
+    <div class="header">
+      <h1><a href="/">ColLab</a></h1>
+    </div>
+    <div class="home-action abel">
+        <% if (signedIn) { %>
+            <a class="button" href="/create">Create A Project</a>
+        <% } else { %>
+            <span>To start your own project 
+                <a href="/signup">sign up</a> or 
+                <a href="/login">log in</a>
+            </span>    
+        <% } %>
+    </div>
+    <div id="posts" class="cabin">
+      <div class="post-tile" ng-repeat="post in posts">
+            <div class="thumbnail-container">
+                <a class="thumb-link" href="/project/{{post.id}}">
+                    <img class="post-thumbnail" src="{{post.imageURL}}" onerror="this.src = '/static/assets/hfM1J8s.png'; this.onerror = ''">
+                </a>
+            </div>
+            <div class="post-detail">
+                <a class="post-link abel" href="/project/{{post.id}}">{{post.title}}</a><br>
+                <span class="post-author"> By {{post.author}}</span>
+                <span ng-if="post.numOffers === 1" class="post-offers"> {{post.numOffers}} Offer</span>
+                <span ng-if="post.numOffers !== 1" class="post-offers"> {{post.numOffers}} Offers</span>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>

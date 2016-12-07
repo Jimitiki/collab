@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="project">
+  <head>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/static/js/post.js">Collab</script>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  </head>
+  <body ng-controller="postCtrl">
+    <div class="header">
+      <div class="top-nav">
+          <% if (signedIn) { %>
+            <a class="top-nav-link abel" href="/create">Create a Project</a>
+            <a class="top-nav-link abel" href="/logout">Logout</a>
+          <% } else { %>
+            <a class="top-nav-link abel" href="/signup">Sign Up</a>
+            <a class="top-nav-link abel" href="/login">Log in</a>
+          <% } %>
+      </div>
+      <h1><a href="/">ColLab</a></h1>
+    </div>
+    <h2 class="project-title abel"><%= title %></h2>
+    <p class="project-author abel">by <%= author %></p>
+    <div class="project-desc cabin"><%= content %></div>
+    <div class="offers cabin">
+      <%for (var offerID in offers) {
+        var offer = offers[offerID]%>
+        <div id="<%=offerID%>"><%=offer.user%><%=offer.type%></div>
+      <%}%>
+        <div ng-repeat="offer in offers" id="{{offer.id}}">{{offer.user}} - {{offer.type}}</div>
+    </div>
+    <% if (signedIn) { %>
+        <button ng-click="showEdit = !showEdit">Offer Help</button>
+        <div ng-class="{ 'hidden': showEdit }" id="edit-offer">
+          <select id="type-select" ng-model="offerType">
+            <option value="money">Money</option>
+            <option value="material">Materials</option>
+            <option value="skill">Skill/Expertise</option>
+            <option value="transportation">Transportation</option>
+            <option value="space">Space</option>
+          </select>
+          <input type="text" ng-model="description">
+          <button ng-click="submitOffer()">Submit</button>
+        </div>
+    <% } else { %>
+        <span class="cabin">Want to help out?
+            <a href="/signup">Create an account</a> or
+            <a href="/login">sign in</a>.
+        </span>
+    <% } %>
+  </body>
+</html>

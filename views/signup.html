@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="signupApp">
+    <head>
+        <title>Collab</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <script src="http://code.angularjs.org/1.2.9/angular.js"></script>
+        <script src="/static/js/signup.js"></script>
+    </head>
+    <body ng-controller="signUpCtrl">
+        <div class="header">
+          <h1><a href="/">ColLab</a></h1>
+        </div>
+        <div class="form-center">
+          <div class="form-container">
+            <p class="form-header abel">Create an Account</p>
+            <form ng-submit="register()">
+
+              <!--Username Input & Icon-->
+              <div class="form-input-container">
+                <input type="text" ng-class="validUsername" class="form-input cabin" ng-model="username" placeholder="Username" autocomplete="off" ng-blur="validateUsername()" required>
+                <i class="form-validation-icon" ng-class="usernameProgress"></i><br>
+                <span class="auth-message cabin">{{usernameMessage}}</span>
+              </div>
+
+              <!--Password Input & Icon-->
+              <div class="form-input-container">
+                <input type="password" ng-class="validPassword" class="form-input cabin" ng-model="password" placeholder="Password" autocomplete="off" ng-blur="validatePassword()" required>
+                <!--i id="signup-toggle-password" class="tooltip" ng-class="passwordToggleIcon" ng-click="togglePassword()">
+                  <span class="tooltiptext">{{passwordTooltipText}}</span>
+                </i><br-->
+                <i class="form-validation-icon" ng-class="passwordIcon"></i><br>
+                <span class="auth-message cabin">{{passwordMessage}}</span>
+              </div>
+              <div class="form-input-container">
+                <input type="password" ng-class="validPasswordConfirm" class="form-input cabin" ng-model="passwordConfirm" placeholder="Confirm password" autocomplete="off" ng-blur="validatePasswordConfirm()" required>
+                <i class="form-validation-icon" ng-class="passwordConfirmIcon"></i><br>
+                <span class="auth-message cabin">{{passwordConfirmMessage}}</span>
+              </div>
+
+              <div><input type="submit" class="submit form-submit abel" value="Sign Up"></div>
+            </form>
+          </div><br>
+          <span class="cabin">Already have an account? <a href="/login">Sign in</a>
+        </div>
+    </body>
+    <script src="https://use.fontawesome.com/a4de407ae1.js"></script>
+</html>

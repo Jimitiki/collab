@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="projectBuilder">
+  <head>
+    <title>Collab</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  </head>
+  <body ng-controller="projBuildCtrl">
+    <div class="header">
+      <div class="top-nav">
+        <a class="top-nav-link abel" href="/logout">Logout</a>
+      </div>
+      <h1><a href="/">ColLab</a></h1>
+    </div>
+    <form ng-submit="submitProject()">
+        <input type="text" class="form-input cabin" ng-model="title" placeholder="Title"><br>
+        <input type="text" class="form-input cabin" ng-model="imageURL" placeholder="Image URL"><br>
+        <textarea class="cabin" ng-model="description" placeholder="Description" cols="70" rows="25"></textarea><br>
+        <input type="submit" class="submit abel" value="Submit">
+    </form>
+  </body>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/static/js/projectBuilder.js"></script>
+</html>

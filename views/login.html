@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="loginApp">
+  <head>
+    <title>Collab</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <script src="http://code.angularjs.org/1.2.9/angular.js"></script>
+    <script src="/static/js/login.js"></script>
+  </head>
+  <body ng-controller="loginCtrl">
+    <div class="header">
+      <h1><a href="/">ColLab</a></h1>
+    </div>
+    <div class="form-center">
+      <div class="form-container">
+        <p class="form-header abel">Sign In as a User</p>
+        <span class="auth-message cabin">{{message}}</span><br>
+        <form ng-submit="login()">
+          <input type="text" class="form-input cabin" ng-model="username" placeholder="Username" autocomplete="off" required><br>
+          <input type="password" class="form-input cabin" ng-model="password" placeholder="Password" autocomplete="off" required><br>
+          <input type="submit" class="submit form-submit abel" value="Sign In">
+        </form>
+      </div><br>
+      <span class="cabin">or <a href="/signup">create an account</a></span>
+    </div>
+  </body>
+</html>
