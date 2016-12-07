@@ -60,17 +60,14 @@ exports.getSummaries = function(req, res) {
             .batchSize(20)
             .stream();
     stream.on('data', function(project) {
-                console.log(project._id);
                 postList[project._id] = {
                     title: project.title,
                     author: project.author,
                     imageURL: project.imageUrl
                 };
-                console.log(postList);
             }).on('error', function(error) {
                 console.log(error)
             }).on('close', function() {
-                console.log(postList);
                 res.send(postList);
     });
 }
@@ -94,14 +91,12 @@ exports.addProject = function(req, res) {
         imageUrl: req.body.imageURL,
         offers: []
       };
-        console.log(project);
     //  var id = generateID();
         var proj = new Project(project);
         proj.save(function(err, result) {
             if (err) {
                 console.log(err);
             } else {
-                console.log("success");
                 projects[result._id] = project;
                 res.send({projectID: result._id});
             }

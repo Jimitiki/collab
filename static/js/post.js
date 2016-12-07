@@ -4,6 +4,7 @@ controller('postCtrl', ['$scope', '$http',
     $scope.offers = [];
     $scope.offerType = "";
     $scope.description = "";
+      $scope.showEdit = false;
     $scope.submitOffer = function() {
       $http.post("/offer", {
         type: $scope.offerType,

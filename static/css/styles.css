@@ -16,13 +16,15 @@ body {
 }
 
 h1 {
-  font-size: 50px;
-  margin: 0;
-  position: relative;
-  top: 40px;
-  letter-spacing: 0.7em;
-  font-family: squaredDisplay;
-  text-align: center;
+    font-size: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: 46px;
+    letter-spacing: 0.7em;
+    font-family: squaredDisplay;
+    padding-left: 0.7em;
+    width: 80%;
+    text-align: center;
 }
 
 label{
@@ -58,8 +60,13 @@ textarea {
 
 .button {
     border-radius: 5px;
-    padding: 10px 40px;
-    background-color: #011627;
+    padding: 16px 85px;
+    background-color: #2AB3A6;
+    color: #F6F7F8;
+}
+
+.button:hover {
+  background-color: #2EC4B6;
 }
 
 .cabin {
@@ -70,6 +77,11 @@ textarea {
   height: 150px;
   background: #011627;
   color: #2AB3A6;
+    margin-bottom: 80px;
+}
+
+.hidden {
+    display: none;
 }
 
 .home-action {
@@ -151,6 +163,13 @@ textarea {
     height: 160px;
 }
 
+.post-image {
+    display: block;
+    margin: 50px auto;
+    max-height: 40vh;
+    max-width: 60vw;
+}
+
 .post-link {
     font-weight: bolder;
     font-size: 18px;
@@ -166,9 +185,10 @@ textarea {
 }
 
 .post-tile {
-  margin: 20px;
+  margin: 20px 1vw;
   float: left;
-  width: 350px;
+  width: 20vw;
+    height: 22vw;
   color: #011627;
   border: solid 1px;
   border-color: #dbdbdc;
@@ -198,6 +218,7 @@ textarea {
   padding: 40px;
   border-radius: 4px;
   border-color: #dbdbdc;
+    word-wrap: break-word;
 }
 
 .project-title {
@@ -205,6 +226,14 @@ textarea {
   font-size: 30px;
   width: 60%;
   margin: 60px auto 20px auto;
+}
+
+.site-desc {
+    width: 32vw;
+    text-align: justify;
+    font-family: Cabin;
+    margin: auto;
+    color: #011627;
 }
 
 .submit {
@@ -228,8 +257,8 @@ textarea {
 }
 
 .thumbnail-container {
-    width: 350px;
-    height: 210px;
+    width: 20vw;
+    height: 12vw;
     overflow: hidden;
     position: relative;
 }
@@ -241,4 +270,9 @@ textarea {
 
 .top-nav-link {
     margin-right: 20px;
+}
+
+#posts {
+    margin: 60px auto;
+    width: 68vw;
 }

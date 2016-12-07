@@ -22,6 +22,7 @@
     </div>
     <h2 class="project-title abel"><%= project.title %></h2>
     <p class="project-author abel">by <%= project.author %></p>
+    <img src="<%=project.imageUrl%>" class="post-image">
     <div class="project-desc cabin"><%= project.content %></div>
     <div class="offers cabin">
       <%for (var offerID in offers) {
@@ -31,8 +32,8 @@
         <div ng-repeat="offer in offers" id="{{offer.id}}">{{offer.user}} - {{offer.type}}</div>
     </div>
     <% if (signedIn) { %>
-        <button ng-click="showEdit = !showEdit">Offer Help</button>
-        <div ng-class="{ 'hidden': showEdit }" id="edit-offer">
+        <button class="button" ng-click="showEdit = !showEdit">Offer Help</button>
+        <div ng-class="{ 'hidden': !showEdit }" id="edit-offer">
           <select id="type-select" ng-model="offerType">
             <option value="money">Money</option>
             <option value="material">Materials</option>
