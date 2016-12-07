@@ -47,10 +47,15 @@ exports.createOffer = function(req, res) {
   for (offer in offers) {}
 }
 
-exports.getOffersByProjectID = function(req, res, projectID, project) {
-  var offers = {};
-  Offer.find({projectID: projectID}).toArray(function(result) {
-    project.offers = result;
-    res.send(project);
-  }
+exports.getOffersByProject = function(req, res, project) {
+    console.log(project);
+    var offers = {};
+    offerCollection.find({projectID: project._id}).toArray(function(err, result) {
+        var offers = {};
+        var signedIn = req.session.user ? true : false;
+        if (result) {
+            offers = result;
+        }
+        res.render('post', {project: project, offers: result, signedIn: signedIn});
+    });
 }

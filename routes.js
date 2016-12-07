@@ -45,15 +45,7 @@ module.exports = function(app) {
   app.get('/posts-summary', projects.getSummaries);
   app.post('/project', projects.addProject);
 
-  app.get('/project/:postID', function(req, res) {
-      var signedIn = false;
-      if (req.session.user) {
-          signedIn = true;
-      }
-      var data = projects.getProjectByID(req.params.postID);
-      data.signedIn = signedIn;
-      res.render('post', data); 
-  });
+  app.get('/project/:postID', projects.getProjectByID);
 
   app.get('/create', function(req, res) {
     if (req.session.user) {

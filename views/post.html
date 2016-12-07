@@ -20,9 +20,9 @@
       </div>
       <h1><a href="/">ColLab</a></h1>
     </div>
-    <h2 class="project-title abel"><%= title %></h2>
-    <p class="project-author abel">by <%= author %></p>
-    <div class="project-desc cabin"><%= content %></div>
+    <h2 class="project-title abel"><%= project.title %></h2>
+    <p class="project-author abel">by <%= project.author %></p>
+    <div class="project-desc cabin"><%= project.content %></div>
     <div class="offers cabin">
       <%for (var offerID in offers) {
         var offer = offers[offerID]%>

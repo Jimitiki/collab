@@ -56,18 +56,6 @@ function generateID() {
 
 exports.getSummaries = function(req, res) {
     var postList = {};
-    /*
-    for (var pID in projects) {
-      var project = projects[pID];
-      postList[pID] = {
-          title: project.title,
-          author: project.author,
-          imageURL: project.imageURL,
-          numOffers: project.offers.length
-      }
-    }
-    console.log(projects);
-    */
     var stream = Project.find()
             .batchSize(20)
             .stream();
@@ -76,8 +64,7 @@ exports.getSummaries = function(req, res) {
                 postList[project._id] = {
                     title: project.title,
                     author: project.author,
-                    imageURL: project.imageUrl,
-                    numOffers: project.offers.length
+                    imageURL: project.imageUrl
                 };
                 console.log(postList);
             }).on('error', function(error) {
@@ -85,18 +72,17 @@ exports.getSummaries = function(req, res) {
             }).on('close', function() {
                 console.log(postList);
                 res.send(postList);
-            });
-
+    });
 }
 
 exports.getProjectByID = function(req, res) {
-  var project = {
-    title: projects[id].title,
-    author: projects[id].author,
-    imageURL: projects[id].imageURL,
-    content: projects[id].content
-  };
-  offers.getOffersByIDs(res, projects[id].offers, project);
+    var signedIn = false;
+    var projectID = req.params.postID;
+    Project.findOne({_id: projectID}, function (err, project) {
+        if (project) {
+            offers.getOffersByProject(req, res, project);
+        }
+    });
 }
 
 exports.addProject = function(req, res) {
