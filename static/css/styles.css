@@ -172,6 +172,11 @@ textarea {
   border-color: #D92E44;
 }
 
+.offer {
+    width: 60%;
+    margin: auto;
+}
+
 .post-author {
     font-size: 14px;
 }
@@ -308,7 +313,7 @@ textarea {
 }
 
 #offer-type {
-    width: 140px;
+    width: 150px;
     margin: 5px;
 }
 

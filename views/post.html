@@ -27,9 +27,16 @@
     <div class="offers cabin">
       <%for (var offerID in offers) {
         var offer = offers[offerID]%>
-        <div id="<%=offerID%>"><%=offer.user%><%=offer.type%></div>
+        <div class="offer">
+            <span class="offer-user"><%=offer.user%></span> - <span class="offer-type"><%=offer.type%></span><br>
+            <p><%=offer.content%></p>
+        </div>
       <%}%>
-        <div ng-repeat="offer in offers" id="{{offer.id}}">{{offer.user}} - {{offer.type}}</div>
+        <div ng-repeat="offer in offers">
+            <div class="offer">
+                <span class="offer-user">{{offer.user}}</span> - <span class="offer-type">{{offer.type}}</span><br>
+                <p>{{offer.description}}</p>
+          </div>
     </div>
     <% if (enabled) { %>
         <div class="edit-offer-container">
@@ -40,7 +47,6 @@
                 <option value="material">Materials</option>
                 <option value="skill">Skill/Expertise</option>
                 <option value="transportation">Transportation</option>
-                <option value="space">Space</option>
               </select><br>
                 <textarea id="offer-desc" class="form-input" type="text" ng-model="description" placeholder="how will you help?" rows="4" cols="50"></textarea><br>
               <button class="submit abel form-submit" ng-click="submitOffer()">Submit</button>

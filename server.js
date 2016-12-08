@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 require('./models/users_model.js');
 require('./models/projects_model.js');
 require('./models/offers_model.js');
-var conn = mongoose.connect('mongodb://localhost/myapp');
+var conn = mongoose.connect('mongodb://localhost/collab');
 var app = express();
 app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');

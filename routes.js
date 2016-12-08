@@ -56,17 +56,7 @@ module.exports = function(app) {
   })
 
 
-  app.post('/offer', function(req, res) {
-    if (req.session.user) {
-      var offer = {
-        user: req.session.username,
-        type: req.body.type,
-        content: req.body.content
-      };
-      var offerID = offers.addOffer(offer);
-      res.send({offerID: offerID});
-    }
-  });
+  app.post('/offer', offers.addOffer);
 
   app.delete('/offer', function(req, res) {
 
