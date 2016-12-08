@@ -15,3 +15,163 @@ ReferenceError: projects is not defined
     at /home/bitnami/collab/node_modules/mongoose/lib/document.js:1997:18
     at _combinedTickCallback (internal/process/next_tick.js:67:7)
     at process._tickCallback (internal/process/next_tick.js:98:9)
+(node:12298) DeprecationWarning: Mongoose: Query.prototype.stream() is deprecated in mongoose >= 4.5.0, use Query.prototype.cursor() instead
+(node:12298) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+null
+{ _id: 5849a2a90eb8eb300a63a3a7,
+  author: 't123',
+  title: 'Paint the Y Blue',
+  content: 'Need some blue paint',
+  imageUrl: 'http://www.crockettclan.org/blog/wp-content/uploads/2015/05/y.jpg',
+  __v: 0 }
+null
+{ _id: 5849a2fc0eb8eb300a63a3a9,
+  author: 'clement',
+  title: 'Babysitter Wanted',
+  content: 'Need help',
+  imageUrl: 'https://faculty.cs.byu.edu/~clement/clements.jpg',
+  __v: 0 }
+{ _id: 5849a3240eb8eb300a63a3aa,
+  author: 'clement',
+  title: 'iPhone 8',
+  content: 'Need a tons of money',
+  imageUrl: 'http://www.iphone8guides.com/wp-content/uploads/2016/10/iphone-8-price.jpg',
+  __v: 0 }
+null
+{ _id: 5849a3660eb8eb300a63a3ac,
+  author: 'qbcc',
+  title: 'cat kidney transparent',
+  content: 'Need a donor',
+  imageUrl: 'http://www.bharatint.com/img/categories/our-cat-shop-image.png',
+  __v: 0 }
+null
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a2a90eb8eb300a63a3a7,
+  author: 't123',
+  title: 'Paint the Y Blue',
+  content: 'Need some blue paint',
+  imageUrl: 'http://www.crockettclan.org/blog/wp-content/uploads/2015/05/y.jpg',
+  __v: 0 }
+{ _id: 5849a2fc0eb8eb300a63a3a9,
+  author: 'clement',
+  title: 'Babysitter Wanted',
+  content: 'Need help',
+  imageUrl: 'https://faculty.cs.byu.edu/~clement/clements.jpg',
+  __v: 0 }
+{ _id: 5849a3240eb8eb300a63a3aa,
+  author: 'clement',
+  title: 'iPhone 8',
+  content: 'Need a tons of money',
+  imageUrl: 'http://www.iphone8guides.com/wp-content/uploads/2016/10/iphone-8-price.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+null
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+null
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+null
+{ _id: 5849a2a90eb8eb300a63a3a7,
+  author: 't123',
+  title: 'Paint the Y Blue',
+  content: 'Need some blue paint',
+  imageUrl: 'http://www.crockettclan.org/blog/wp-content/uploads/2015/05/y.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a2a90eb8eb300a63a3a7,
+  author: 't123',
+  title: 'Paint the Y Blue',
+  content: 'Need some blue paint',
+  imageUrl: 'http://www.crockettclan.org/blog/wp-content/uploads/2015/05/y.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a3240eb8eb300a63a3aa,
+  author: 'clement',
+  title: 'iPhone 8',
+  content: 'Need a tons of money',
+  imageUrl: 'http://www.iphone8guides.com/wp-content/uploads/2016/10/iphone-8-price.jpg',
+  __v: 0 }
+null
+{ _id: 5849a3240eb8eb300a63a3aa,
+  author: 'clement',
+  title: 'iPhone 8',
+  content: 'Need a tons of money',
+  imageUrl: 'http://www.iphone8guides.com/wp-content/uploads/2016/10/iphone-8-price.jpg',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }
+{ _id: 5849a3660eb8eb300a63a3ac,
+  author: 'qbcc',
+  title: 'cat kidney transparent',
+  content: 'Need a donor',
+  imageUrl: 'http://www.bharatint.com/img/categories/our-cat-shop-image.png',
+  __v: 0 }
+{ _id: 5849a1bd0eb8eb300a63a3a5,
+  author: 'todd1',
+  title: 'Build A Fence',
+  content: 'I need help building a fence. I could use some manpower to help me build it. I also need some wood planks.',
+  imageUrl: 'https://s-media-cache-ak0.pinimg.com/originals/9c/ad/e9/9cade98d6d5e053c3151333c89c74caa.jpg',
+  __v: 0 }

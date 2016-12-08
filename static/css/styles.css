@@ -4,6 +4,9 @@
   url(../assets/SquaredDisplay.woff2);
 }
 
+p {
+  word-wrap: break-word;
+}
 
 a {
   text-decoration: none;
@@ -173,8 +176,13 @@ textarea {
 }
 
 .offer {
-    width: 60%;
-    margin: auto;
+    width: 40%;
+    margin: 40px auto;
+	border: solid 1px;
+	padding: 40px;
+	border-radius: 4px;
+	border-color: #dbdbdc;
+	word-wrap: break-word;
 }
 
 .post-author {
@@ -207,13 +215,6 @@ textarea {
     font-size: 18px;
     color: #011627;
     text-transform: uppercase;
-}
-
-.post-offers {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    font-size: 14px;
 }
 
 .post-tile {

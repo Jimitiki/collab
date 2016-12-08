@@ -11,10 +11,11 @@ controller('postCtrl', ['$scope', '$http',
                 type: $scope.offerType,
                 description: $scope.description
               }).then(function(response) {
+		console.log(response);
                 $scope.offers.push({
-                  user: response.user,
-                  type: response.type,
-                  description: response.description
+                  user: response.data.user,
+                  type: response.data.type,
+                  description: response.data.content
                 });
                 $scope.offerType = "";
                 $scope.description = "";
