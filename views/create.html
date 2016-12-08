@@ -14,10 +14,12 @@
       <h1><a href="/">ColLab</a></h1>
     </div>
     <form ng-submit="submitProject()">
-        <input type="text" class="form-input cabin" ng-model="title" placeholder="Title"><br>
-        <input type="text" class="form-input cabin" ng-model="imageURL" placeholder="Image URL"><br>
-        <textarea class="cabin" ng-model="description" placeholder="Description" cols="70" rows="25"></textarea><br>
-        <input type="submit" class="submit abel" value="Submit">
+        <div id="input-container">
+            <input type="text" class="form-input cabin post-input" ng-model="title" placeholder="Title"><br>
+            <input type="text" class="form-input cabin post-input" ng-model="imageURL" placeholder="Image URL"><br>
+            <textarea class="cabin" ng-model="description" placeholder="Describe your project" cols="70" rows="25"></textarea><br>
+            <input id="post-submit" type="submit" class="submit abel" value="Submit">
+        </div>
     </form>
   </body>
   <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>

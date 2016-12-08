@@ -6,17 +6,19 @@ controller('postCtrl', ['$scope', '$http',
     $scope.description = "";
       $scope.showEdit = false;
     $scope.submitOffer = function() {
-      $http.post("/offer", {
-        type: $scope.offerType,
-        description: $scope.description
-      }).then(function(response) {
-        $scope.offers.push({
-          id: "0000",
-          type: $scope.offerType,
-          description: $scope.description
-        });
-        $scope.offerType = "";
-        $scope.description = "";
-      });
+        if ($scope.offerType) {
+              $http.post("/offer", {
+                type: $scope.offerType,
+                description: $scope.description
+              }).then(function(response) {
+                $scope.offers.push({
+                  id: "0000",
+                  type: $scope.offerType,
+                  description: $scope.description
+                });
+                $scope.offerType = "";
+                $scope.description = "";
+              });
+        }
     }
   }]);

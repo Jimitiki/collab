@@ -17,6 +17,7 @@ exports.getOffersByProject = function(req, res, project) {
         if (result) {
             offers = result;
         }
-        res.render('post', {project: project, offers: result, signedIn: signedIn});
+        var enabled = signedIn && project.author !== req.session.username;
+        res.render('post', {project: project, offers: result, signedIn: signedIn, enabled: enabled});
     });
 }

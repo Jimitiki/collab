@@ -31,24 +31,26 @@
       <%}%>
         <div ng-repeat="offer in offers" id="{{offer.id}}">{{offer.user}} - {{offer.type}}</div>
     </div>
-    <% if (signedIn) { %>
-        <button class="button" ng-click="showEdit = !showEdit">Offer Help</button>
-        <div ng-class="{ 'hidden': !showEdit }" id="edit-offer">
-          <select id="type-select" ng-model="offerType">
-            <option value="money">Money</option>
-            <option value="material">Materials</option>
-            <option value="skill">Skill/Expertise</option>
-            <option value="transportation">Transportation</option>
-            <option value="space">Space</option>
-          </select>
-          <input type="text" ng-model="description">
-          <button ng-click="submitOffer()">Submit</button>
+    <% if (enabled) { %>
+        <div class="edit-offer-container">
+            <button id="show-offer-edit" class="submit abel" ng-click="showEdit = !showEdit" ng-class="{ 'hidden': showEdit }">Offer Help</button>
+            <div ng-class="{ 'hidden': !showEdit }" id="edit-offer" required>
+              <select id="offer-type" class="form-input" id="type-select" ng-model="offerType">
+                <option value="money">Money</option>
+                <option value="material">Materials</option>
+                <option value="skill">Skill/Expertise</option>
+                <option value="transportation">Transportation</option>
+                <option value="space">Space</option>
+              </select><br>
+                <textarea id="offer-desc" class="form-input" type="text" ng-model="description" placeholder="how will you help?" rows="4" cols="50"></textarea><br>
+              <button class="submit abel form-submit" ng-click="submitOffer()">Submit</button>
+            </div>
         </div>
-    <% } else { %>
-        <span class="cabin">Want to help out?
+    <% } else if (!signedIn) { %>
+        <p class="guest-offer guest-action cabin">Want to help out?
             <a href="/signup">Create an account</a> or
-            <a href="/login">sign in</a>.
-        </span>
+            <a href="/login">sign in</a> to offer your services.
+        </p>
     <% } %>
   </body>
 </html>

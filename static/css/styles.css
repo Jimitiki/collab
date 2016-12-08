@@ -63,6 +63,7 @@ textarea {
     padding: 16px 85px;
     background-color: #2AB3A6;
     color: #F6F7F8;
+    font-size: 23px;
 }
 
 .button:hover {
@@ -87,6 +88,10 @@ textarea {
 .home-action {
     margin: 40px 0 20px 0;
     text-align: center;
+}
+
+.input-container {
+    margin: auto;
 }
 
 .fa-check {
@@ -149,6 +154,20 @@ textarea {
   top: 20px;
 }
 
+.guest-action {
+    border: solid 1px;
+    border-radius: 3px;
+    border-color: #011627;
+    padding: 30px 80px;
+}
+
+.guest-offer {
+    text-align: center;
+    width: 30vw;
+    max-width: 350px;
+    margin: 60px auto;
+}
+
 .invalid {
   border-color: #D92E44;
 }
@@ -163,11 +182,19 @@ textarea {
     height: 160px;
 }
 
+.edit-offer-container {
+    text-align: center;
+}
+
 .post-image {
     display: block;
     margin: 50px auto;
     max-height: 40vh;
     max-width: 60vw;
+}
+
+.post-input {
+    width: 576px;
 }
 
 .post-link {
@@ -185,7 +212,7 @@ textarea {
 }
 
 .post-tile {
-  margin: 20px 1vw;
+  margin: 20px 1.28vw;
   float: left;
   width: 20vw;
     height: 22vw;
@@ -237,13 +264,12 @@ textarea {
 }
 
 .submit {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 23px;
   width: 150px;
   color: white;
   background: #2AB3A6;
   padding: 6px;
-  border: solid;
+  border: solid 0px;
   border-radius: 3px;
 }
 
@@ -272,7 +298,25 @@ textarea {
     margin-right: 20px;
 }
 
+#input-container {
+    text-align: center;
+}
+
+#offer-desc {
+    margin: 5px;
+    width: auto;
+}
+
+#offer-type {
+    width: 140px;
+    margin: 5px;
+}
+
 #posts {
     margin: 60px auto;
     width: 68vw;
+}
+
+#show-offer-edit {
+    text-align: center;
 }
