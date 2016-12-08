@@ -59,7 +59,6 @@ exports.addProject = function(req, res) {
             if (err) {
                 console.log(err);
             } else {
-                projects[result._id] = project;
                 res.send({projectID: result._id});
             }
         });

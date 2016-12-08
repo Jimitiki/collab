@@ -3,3 +3,15 @@
 582fc59690db54064c1f9865
 (node:9691) DeprecationWarning: Mongoose: Query.prototype.stream() is deprecated in mongoose >= 4.5.0, use Query.prototype.cursor() instead
 (node:9707) DeprecationWarning: Mongoose: Query.prototype.stream() is deprecated in mongoose >= 4.5.0, use Query.prototype.cursor() instead
+(node:9707) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+null
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+ReferenceError: projects is not defined
+    at /home/bitnami/collab/controllers/projects_controller.js:62:17
+    at /home/bitnami/collab/node_modules/mongoose/lib/model.js:3388:16
+    at /home/bitnami/collab/node_modules/mongoose/lib/document.js:1997:18
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
